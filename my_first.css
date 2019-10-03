@@ -2,3 +2,14 @@ body {
   background-color: red;
    background-image: url(img.jpg);
 }
+p {
+   background-color: white;  
+}
+.nastya{
+   background-color: yellow;
+  color: green;
+}
+#lera{
+   background-color:green;
+  border: 4px double black; 
+}
