@@ -6,7 +6,7 @@ p {
  margin-left: 10%;
   font-size: 15pt;
    background-color: white;
-   color: pink;
+   
   line-height: 90%;
     
 }
@@ -23,4 +23,5 @@ p {
    background-color:green;
   border: 4px double black; 
   line-height: 90%;
+  color: pink;
 }
