@@ -3,16 +3,19 @@ body {
    background-image: url(img.jpg);
 }
 p {
+  left: 20px;
   font-size: 15pt;
    background-color: white;
     
 }
 .nastya{
+  left: 20px;
   font-style: italic;
    background-color: yellow;
   color: green;
 }
 #lera{
+  left: 20px;
   font-variant: small-caps;
    background-color:green;
   border: 4px double black; 
