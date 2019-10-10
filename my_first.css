@@ -3,21 +3,24 @@ body {
    background-image: url(img.jpg);
 }
 p {
- margin-left: 20%;
+ margin-left: 5%;
   font-size: 15pt;
    background-color: white;
    color: pink;
+  line-height: 10%;
     
 }
 .nastya{
-  margin-left: 20%;
+  margin-left: 5%;
   font-style: italic;
    background-color: yellow;
   color: green;
+  line-height: 10%;
 }
 #lera{
-  margin-left: 20%;
+  margin-left: 5%;
   font-variant: small-caps;
    background-color:green;
   border: 4px double black; 
+  line-height: 10%;
 }
