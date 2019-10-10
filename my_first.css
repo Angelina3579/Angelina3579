@@ -3,20 +3,20 @@ body {
    background-image: url(img.jpg);
 }
 p {
-  left: 20px;
+ margin-left: 20%;
   font-size: 15pt;
    background-color: white;
    color: pink;
     
 }
 .nastya{
-  left: 20px;
+  margin-left: 20%;
   font-style: italic;
    background-color: yellow;
   color: green;
 }
 #lera{
-  left: 20px;
+  margin-left: 20%;
   font-variant: small-caps;
    background-color:green;
   border: 4px double black; 
