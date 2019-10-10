@@ -13,6 +13,7 @@ p {
   color: green;
 }
 #lera{
+  font-variant: small-caps;
    background-color:green;
   border: 4px double black; 
 }
