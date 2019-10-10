@@ -7,7 +7,7 @@ p {
   font-size: 15pt;
    background-color: white;
    color: pink;
-  line-height: 60%;
+  line-height: 90%;
     
 }
 .nastya{
@@ -15,12 +15,12 @@ p {
   font-style: italic;
    background-color: yellow;
   color: green;
-  line-height: 60%;
+  line-height: 90%;
 }
 #lera{
   margin-left: 10%;
   font-variant: small-caps;
    background-color:green;
   border: 4px double black; 
-  line-height: 60%;
+  line-height: 90%;
 }
