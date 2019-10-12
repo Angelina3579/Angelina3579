@@ -1,10 +1,10 @@
-p:hover {
+a:hover {
   color: #f00;
   }
-p:link {
+a:link {
    color: #036;
 }
-p:visited {
+a:visited {
    color: #606
 }
 b:first-child {
