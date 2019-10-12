@@ -10,3 +10,6 @@ a:visited {
 b:first-child {
   color:red;
 }
+  b:first-child {
+    color: #f272ff;
+}
