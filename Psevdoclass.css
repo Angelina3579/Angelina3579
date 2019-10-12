@@ -18,3 +18,21 @@ b:first-child {
   b:first-child {
     color: #f272ff;
 }
+.area1{
+    display: none;
+}
+.area2{
+    display: none;
+}
+.area3{
+    display: none;
+}
+.area1:target {
+    display: inline-block;
+}
+.area2:target{
+    display: inline-block;
+}
+.area3:target{
+    display: inline-block;
+}
