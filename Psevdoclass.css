@@ -1,1 +1,9 @@
-
+p:hover {
+  color: #f00;
+  }
+p:link {
+   color: #036;
+}
+p:visited {
+   color: #606
+}
