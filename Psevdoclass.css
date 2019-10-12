@@ -7,3 +7,6 @@ p:link {
 p:visited {
    color: #606
 }
+b:first-child {
+  color:red;
+}
