@@ -31,3 +31,18 @@ p span{
    float: right;
   margin: 0 0 5px 5px;
 }
+table span {
+    background-color: cornsilk;
+    border: 1px solid black;
+    padding-bottom: 2px;
+    padding-top: 1px;
+}
+table{
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+td, th {
+    padding: 5px;
+    border: 3px solid black;
+}
