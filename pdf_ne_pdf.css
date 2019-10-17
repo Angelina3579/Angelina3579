@@ -1,12 +1,31 @@
-i{
-  background-color: white;
+body{
+    background-color: gray;
 }
-p{
-  margin-left: 10%;
+.page{
+    background-color: white;
+    width: 210mm;
+    margin:auto;
+    padding-left: 3cm;
+    padding-right: 2cm;
+    padding-bottom: 2cm;
+    padding-top: 2cm;
 }
-#cl {
-  background-color:green;
-  color:green;
+#cl{
+    background-color: aqua;
+    border: 4px solid black;
+    padding-left: 10mm;
+    padding-right: 10mm;
+    padding-bottom: 1cm;
+    padding-top: 1cm;
+}
+ul li {
+    list-style: square outside;
+}
+p span{
+    background-color: cornsilk;
+    border: 1px solid black;
+    padding-bottom: 2px;
+    padding-top: 1px;
 }
 .right{
    float: right;
