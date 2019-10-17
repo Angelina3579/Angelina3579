@@ -8,7 +8,7 @@ p{
   background-color:green;
   color:green;
 }
-.left{
-   float: left;
+.right{
+   float: right;
   margin: 0 0 5px 5px
 }
