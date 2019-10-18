@@ -49,3 +49,6 @@ td, th {
 .big {
     font-size: 250%;
 }
+p {
+    text-indent: 20px;
+}
