@@ -52,3 +52,6 @@ td, th {
   p {
     text-indent: 20px; 
    }
+figure{
+     text-align: center;
+}
