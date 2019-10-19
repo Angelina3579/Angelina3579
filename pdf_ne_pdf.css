@@ -53,5 +53,14 @@ td, th {
     text-indent: 20px; 
    }
 figure{
-     text-align: center;
+    text-align: center;
+}
+.cod
+{
+    background-color: #e9d888;
+    border: 4px solid black;
+    padding-left: 10mm;
+    padding-right: 10mm;
+    padding-bottom: 1cm;
+    padding-top: 1cm;
 }
