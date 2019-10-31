@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Псевдоклассы</title>
+
+    <link rel="stylesheet" href="Psevdoclass.css">
+</head>
+<body>
+<style>
+    ol {
+        counter-reset: myCounter;
+    }
+    ol li {
+        list-style: none;
+    }
+    ol li::before{
+        counter-increment: myCounter;
+        content:"Вопрос №" counters(myCounter, ".");
+    }
+    </style>
+<ol>
+    <li>
+        <form id="q1">
+            <p><b> Часть речи, обозначающая предмет, называется: </b></p>
+            <input type="radio" name="q1" value="answer1">  Наречие <br>
+            <input type="radio" name="q1" value="answer1">  Прилагательное<br>
+            <input type="radio" name="q1" value="answer1">  Существительное<br>
+            <input type="radio" name="q1" value="answer1">  Глагол<br>
+        </form>
+    </li>
+
+    <li>
+        <form id="q2">
+            <p><b> Найдите главные члены в предложении: </b></p>
+            <input type="radio" name="q2" value="answer1">  в театре (Р.п) <br>
+            <input type="radio" name="q1" value="answer1">  за деревом (Т.п)<br>
+            <input type="radio" name="q1" value="answer1">  за пустыней (Д.п)<br>
+            <input type="radio" name="q1" value="answer1">  из тетради (Р.п)<br>
+        </form>
+    </li>
+
+    <li>
+        <form id="q3">
+            <p><b> Найдите ошибки в определении падежа: </b></p>
+            <input type="checkbox" name="q3" value="answer3">  Наречие <br>
+            <input type="checkbox" name="q3" value="answer3">  Прилагательное<br>
+            <input type="checkbox" name="q3" value="answer3">  Существительное<br>
+            <input type="checkbox" name="q3" value="answer3">  Глагол<br>
+        </form>
+    </li>
+
+    <li>
+        <form id="q4">
+            <p><b> В каком предложении нет однородных членов: </b></p>
+            <input type="checkbox" name="q4" value="answer4">  Мыши, кроты, землеройки живут в корнях деревьев <br>
+            <input type="checkbox" name="q4" value="answer4">  Из кукурузы делают крахмал, муку, крупу<br>
+            <input type="checkbox" name="q4" value="answer4">  Осенью ребята запаслись желудями, шишками, семенами.<br>
+            <input type="checkbox" name="q4" value="answer4"> Из облаков собираются тучи, из туч идет дождь<br>
+        </form>
+    </li>
+
+    <li>
+        <form id="q5">
+            <b><p>В какую группу входят слова только однокоренные слова к слову смешной?</b></p>
+            <input type="radio" name="q5" value="answer5">  мешать, меховой, посмеяться<br>
+            <input type="radio" name="q5" value="answer5"> смех, смешной, мешок<br>
+            <input type="radio" name="q5" value="answer5"> смешинка, смех, насмешить<br>
+            <input type="radio" name="q5" value="answer5"> поместить, помехи, смеяться<br>
+        </form>
+    </li>
+
+    <li>
+        <form id="q6">
+            <p><b>Укажите правильный вариант определения падежей имен существительных в 	предложении:</b></p>
+            <b><p>Лебедь, по своей величине, силе, красоте и величавой осанке давно назван царем  	водоплавающей птицы.</b></p>
+            <input type="radio" name="q6" value="answer6">  И, В, Д, Т<br>
+            <input type="radio" name="q6" value="answer6"> П,Р,И,Р<br>
+            <input type="radio" name="q6" value="answer6"> В,П,Р,И<br>
+            <input type="radio" name="q6" value="answer6"> П,Т,И,Д<br>
+        </form>
+    </li>
+
+    <li>
+        <form id="q7">
+             <p><b>Укажите предложения, где необходимо поставить запяую:</b></p>
+            <input type="checkbox" name="q7" value="answer7">  Вода в реке была теплая но очень мутная.<br>
+            <input type="checkbox" name="q7" value="answer7"> Я возвращался с охоты и шёл по аллее сада.<br>
+            <input type="checkbox" name="q7" value="answer7"> Летучая мышь днём спит а ночью летает.<br>
+            <input type="checkbox" name="q7" value="answer7"> Лисица уткнула нос в хвост и дремлет.<br>
+         </form>
+    </li>
+
+    <li>
+        <form id="q8">
+            <p><b>Укажите слова с безударной гласной О:</b></p>
+            <input type="checkbox" name="q8" value="answer8"> а) к..чели<br>
+            <input type="checkbox" name="q8" value="answer8">б) хл..пушка<br>
+            <input type="checkbox" name="q8" value="answer8">в) п..стух<br>
+            <input type="checkbox" name="q8" value="answer8">г) тр..винка<br>
+            <input type="checkbox" name="q8" value="answer8">д) бр..дяга<br>
+         </form>
+    </li>
+
+        <form id="q9">
+            <p><b>Вопрос №9.</b></p>
+            <p><b>Укажите слово с разделительным твердым знаком:</b></p>
+            <input type="radio" name="q9" value="answer9">а) б..ёт<br>
+            <input type="radio" name="q9" value="answer9">б) чирикан..е<br>
+            <input type="radio" name="q9" value="answer9">в) об..явление<br>
+            <input type="radio" name="q9" value="answer9">г) в..ёт<br>
+        </form>
+
+    <li>
+        <form id="q10">
+            <p><b> Вопрос №10.</b></p>
+            <p><b>Второстепенными членами предложения являются:</b></p>
+            <input type="radio" name="q10" value="answer10">а) прилагательное и наречие<br>
+            <input type="radio" name="q10" value="answer10">б) подлежащее и сказуемое<br>
+            <input type="radio" name="q10" value="answer10">в) определение и дополнение<br>
+        </form>
+    </li>
+</ol>
+</body>
+</html>
