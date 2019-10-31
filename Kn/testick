@@ -12,14 +12,31 @@
         counter-reset: myCounter;
     }
     ol li {
+        margin-top:50px;
         list-style: none;
     }
     ol li::before{
+        padding-left: 100px;
+        font-variant: small-caps;
+        font-size: 15pt;
+        color: #80181f;
+        font-style: italic;
         counter-increment: myCounter;
         content:"Вопрос №" counters(myCounter, ".");
     }
+    button{
+        display: inline-block;
+        margin: 40px;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: red;
+
+    }
     </style>
 <ol>
+    <div style="float: left; width: 49%;">
     <li>
         <form id="q1">
             <p><b> Часть речи, обозначающая предмет, называется: </b></p>
@@ -33,20 +50,18 @@
     <li>
         <form id="q2">
             <p><b> Найдите главные члены в предложении: </b></p>
-            <input type="radio" name="q2" value="answer1">  в театре (Р.п) <br>
-            <input type="radio" name="q1" value="answer1">  за деревом (Т.п)<br>
-            <input type="radio" name="q1" value="answer1">  за пустыней (Д.п)<br>
-            <input type="radio" name="q1" value="answer1">  из тетради (Р.п)<br>
+            <p><b>Порыв ветра разметал листву.</b></p>
+            Введите текст: <input type="text" name="q2" value="answer2"><br>
         </form>
     </li>
 
     <li>
         <form id="q3">
             <p><b> Найдите ошибки в определении падежа: </b></p>
-            <input type="checkbox" name="q3" value="answer3">  Наречие <br>
-            <input type="checkbox" name="q3" value="answer3">  Прилагательное<br>
-            <input type="checkbox" name="q3" value="answer3">  Существительное<br>
-            <input type="checkbox" name="q3" value="answer3">  Глагол<br>
+            <input type="checkbox" name="q3" value="answer3">  в театре (Р.п) <br>
+            <input type="checkbox" name="q3" value="answer3">  за деревом (Т.п)<br>
+            <input type="checkbox" name="q3" value="answer3">  за пустыней (Д.п)<br>
+            <input type="checkbox" name="q3" value="answer3">  из тетради (Р.п)<br>
         </form>
     </li>
 
@@ -69,7 +84,9 @@
             <input type="radio" name="q5" value="answer5"> поместить, помехи, смеяться<br>
         </form>
     </li>
+    </div>
 
+    <div style="float: right; width: 49%;">
     <li>
         <form id="q6">
             <p><b>Укажите правильный вариант определения падежей имен существительных в 	предложении:</b></p>
@@ -102,24 +119,27 @@
          </form>
     </li>
 
+    <li>
         <form id="q9">
-            <p><b>Вопрос №9.</b></p>
             <p><b>Укажите слово с разделительным твердым знаком:</b></p>
             <input type="radio" name="q9" value="answer9">а) б..ёт<br>
             <input type="radio" name="q9" value="answer9">б) чирикан..е<br>
             <input type="radio" name="q9" value="answer9">в) об..явление<br>
             <input type="radio" name="q9" value="answer9">г) в..ёт<br>
         </form>
+    </li>
 
     <li>
         <form id="q10">
-            <p><b> Вопрос №10.</b></p>
             <p><b>Второстепенными членами предложения являются:</b></p>
             <input type="radio" name="q10" value="answer10">а) прилагательное и наречие<br>
             <input type="radio" name="q10" value="answer10">б) подлежащее и сказуемое<br>
             <input type="radio" name="q10" value="answer10">в) определение и дополнение<br>
         </form>
     </li>
+        <button>Результат</button>
+    </div>
 </ol>
+
 </body>
 </html>
