@@ -13,9 +13,9 @@
         var text = "";
         var i;
        for (i = 0; i < MyForm.length; i++) {
-            if (myForm.elements[i].type=="text")
+            if (MyForm.elements[i].type=="text")
             {
-                return myForm.elements[i].value;
+                return MyForm.elements[i].value;
             }
             else {
                 if (MyForm.elements[i].checked) {
@@ -27,7 +27,7 @@
     }
 
     function CheckAllAnswers() {
-        let array_of_correct_answers = ['2', 'порыв разметал', '13', '4', '3', '2', '13', '25', '3', '3'];
+        let array_of_correct_answers = ['2', 'порыв разметал', '02', '3', '2', '2', '02', '14', '2', '2'];
         var ball=0;
 
         for (let i=1; i<=10; ++i )
@@ -184,3 +184,4 @@
 <p id="res"></p>
 </body>
 </html>
+
