@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>Моя таблица</title>
+</head>
+<body>
+<script>
+  fuction loadTable()
+  {
+    let myTable = document.getElementById("iTable");
+    let fild_size = document.getElementById("field_size");
+    let nx = fild_size;
+    let ny = fild_size;
+    myTable.innerHTML="";
+    for (let i=0; i<nx; ++i) {
+      let newTableLine = document.CreateElement ("tr");
+      for (let j=0; j<ny;++j) {
+        newTableCell.setAttribute("id","cell_", )
+      }
+    }
+      }
+</script>
+<style>
+  body{
+    background-color: #f3ff90;
+  }
+
+  </style>
+<b class="game">
+  <div align = "center">
+  <h1>Крестики-нолики</h1>
+  </div>
+  <b><i>Укажи размер поля:</i></b>
+<input type="text" id="field_size" value="10">
+  <button onclick="loadTable()">вперед</button>
+  <div class="gameTable">
+    <Table id="iTable">
+    </Table>
+<div>
+
+</body>
+</html>
