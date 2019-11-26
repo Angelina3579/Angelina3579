@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Лабораторная 6</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        tr:nth-child(even) {
+            background: #4a4a4a;
+        }
+    </style>
+    <script>
+        var tabarr;
+        var flag = 1;
+        var h;
+        var w;
+
+        function build() {
+            var tab = document.getElementById("tabl");
+            h = document.getElementById("heig").value;
+            w = document.getElementById("wid").value;
+            tab.innerHTML = "";
+            tabarr = new Array(h);
+            for (let i = 0; i < h; i++) {
+                tabarr[i] = new Array(w);
+            }
+            if ((h > 50) || (w > 50)) {
+                alert("Слишком большое поле!");
+                return;
+            }
+            let siz = document.documentElement.clientWidth / w;
+            for (let i = 0; i < h; i++) {
+                let newline = document.createElement("tr");
+                for (let j = 0; j < w; j++) {
+                    let newcell = document.createElement("td");
+                    newcell.width = siz;
+                    newcell.height = siz;
+                    newcell.setAttribute("x", j);
+                    newcell.setAttribute("y", i);
+                    newcell.setAttribute("status", "empty");
+                    tabarr[i][j] = newcell;
+                    newline.appendChild(newcell);
+                }
+                tab.appendChild(newline);
+            }
+
+        }
+
+
+        window.onload = function () {
+
+            document.getElementById("tabl").onclick = function (event) {
+                if (event.target.hasChildNodes()) return;
+                let img = document.createElement('img');
+                let status;
+                if (flag == 1) {
+                    img.src = "./lab6_files/krest.png"
+                    flag = 0;
+                    event.target.status = "krest"
+                } else {
+                    img.src = "./lab6_files/crug.png"
+                    flag = 1;
+                    event.target.status = "crug"
+                }
+                img.style.height = "100%";
+                img.style.width = "100%";
+                event.target.appendChild(img);
+                checkwin(event.target, 1, 0);
+                checkwin(event.target, 0, 1);
+                checkwin(event.target, 1, 1);
+                checkwin(event.target, -1, 1);
+            }
+
+            function checkwin(thistd, xstep, ystep) {
+                let x = +thistd.getAttribute("x");
+                let y = +thistd.getAttribute("y");
+                let lastturn;
+                let wincount = 0;
+                if (flag == 0) lastturn = 'krest';
+                else lastturn = 'crug';
+                while ((x - xstep >= 0) && (x - xstep < w) && (y - ystep < h) && (y - ystep >= 0) && (tabarr[y - ystep][x - xstep].status == lastturn)) {
+                    x -= xstep;
+                    y -= ystep
+                }
+                wincount++;
+                while ((x + xstep >= 0) && (x + xstep < w) && (y + ystep < h) && (y + ystep >= 0) && (tabarr[y + ystep][x + xstep].status == lastturn)) {
+                    wincount++;
+                    x += xstep;
+                    y += ystep;
+                }
+                if (wincount >= 5) {
+                    if (lastturn == "krest")
+                        alert("Red won!");
+                    else
+                        alert("Blue won!");
+                    build();
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<h1><a href="index.html">Назад</a></h1>
+<h1 class="center">Лабораторная 6</h1>
+<hr>
+<form onsubmit="build();return false;" id="source">
+    Клетки по вертикали:<br>
+    <input type="text" id="heig"><br>
+    Клетки по горизонтали:<br>
+    <input type="text" id="wid"><br>
+    *Не более 50 клеток в любую из сторон <br>
+    <p id="win"></p>
+    <input type="submit" value="Построить поле">
+</form>
+<table id="tabl">
+</table>
+</body>
+</html>
