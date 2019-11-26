@@ -9,6 +9,23 @@
             background: #4a4a4a;
         }
     </style>
+    
+</head>
+<body background="img.jpg">
+<h1><a href="index.html">Назад</a></h1>
+<h1 class="center">Лабораторная 6</h1>
+<hr>
+<form onsubmit="build();return false;" id="source">
+    Клетки по вертикали:<br>
+    <input type="text" id="heig"><br>
+    Клетки по горизонтали:<br>
+    <input type="text" id="wid"><br>
+    *Не более 50 клеток в любую из сторон <br>
+    <p id="win"></p>
+    <input type="submit" value="Построить поле">
+</form>
+<table id="tabl">
+</table>
     <script>
         var tabbar;
         var flag = 1;
@@ -16,7 +33,6 @@
         var w;
 
         function build() {
-            document.write ("<h1>Hello Wordl</h1>");
             var tab = document.getElementById("tabl");
             h = document.getElementById("heig").value;
             w = document.getElementById("wid").value;
@@ -100,21 +116,5 @@
 
         }
     </script>
-</head>
-<body background="img.jpg">
-<h1><a href="index.html">Назад</a></h1>
-<h1 class="center">Лабораторная 6</h1>
-<hr>
-<form onsubmit="build();return false;" id="source">
-    Клетки по вертикали:<br>
-    <input type="text" id="heig"><br>
-    Клетки по горизонтали:<br>
-    <input type="text" id="wid"><br>
-    *Не более 50 клеток в любую из сторон <br>
-    <p id="win"></p>
-    <input type="submit" value="Построить поле">
-</form>
-<table id="tabl">
-</table>
 </body>
 </html>
