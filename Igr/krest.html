@@ -9,27 +9,6 @@
             background: #4a4a4a;
         }
     </style>
-    
-</head>
-<body background="img.jpg">
-
-    <h1><a href="index.html">Назад</a></h1>
-    
-<h1 class="center">Лабораторная 6</h1>
-<hr>
-    
-<form onsubmit="build();return false;" id="source">
-    
-    Клетки по вертикали:<br>
-    <input type="text" id="height"><br>
-    Клетки по горизонтали:<br>
-    <input type="text" id="width"><br>
-    *Не более 50 клеток в любую из сторон <br>
-    <p id="win"></p>
-    <input type="submit" value="Построить поле">
-</form>
-<table id="tabl">
-</table>
     <script>
         var tabbar;
         var flag = 1;
@@ -120,5 +99,25 @@
 
         }
     </script>
+</head>
+<body background="img.jpg">
+
+    <h1><a href="index.html">Назад</a></h1>
+    
+<h1 class="center">Лабораторная 6</h1>
+<hr>
+    
+<form onsubmit="build();return false;" id="source">
+    
+    Клетки по вертикали:<br>
+    <input type="text" id="height"><br>
+    Клетки по горизонтали:<br>
+    <input type="text" id="width"><br>
+    *Не более 50 клеток в любую из сторон <br>
+    <p id="win"></p>
+    <input type="submit" value="Построить поле">
+</form>
+<table id="tabl">
+</table>
 </body>
 </html>
