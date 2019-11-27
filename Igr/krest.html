@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -10,25 +11,25 @@
         }
     </style>
     <script>
-        var tabbar;
+        var tabarr;
         var flag = 1;
         var h;
         var w;
 
         function build() {
             var tab = document.getElementById("tabl");
-            h = document.getElementById("height").value;
-            w = document.getElementById("width").value;
+            h = document.getElementById("heig").value;
+            w = document.getElementById("wid").value;
             tab.innerHTML = "";
             tabarr = new Array(h);
             for (let i = 0; i < h; i++) {
                 tabarr[i] = new Array(w);
             }
-            if ((h > 30) || (w > 30)) {
+            if ((h > 50) || (w > 50)) {
                 alert("Слишком большое поле!");
                 return;
             }
-            let size = document.documentElement.clientWidth / w;
+            let siz = document.documentElement.clientWidth / w;
             for (let i = 0; i < h; i++) {
                 let newline = document.createElement("tr");
                 for (let j = 0; j < w; j++) {
@@ -54,11 +55,11 @@
                 let img = document.createElement('img');
                 let status;
                 if (flag == 1) {
-                    img.src = "./lab6_files/krest.png"
+                    img.src = "C:/laba/krest.png"
                     flag = 0;
                     event.target.status = "krest"
                 } else {
-                    img.src = "./lab6_files/crug.png"
+                    img.src = "C:/laba/crug.jpg"
                     flag = 1;
                     event.target.status = "crug"
                 }
@@ -100,19 +101,15 @@
         }
     </script>
 </head>
-<body background="img.jpg">
-
-    <h1><a href="index.html">Назад</a></h1>
-    
+<body>
+<h1><a href="index.html">Назад</a></h1>
 <h1 class="center">Лабораторная 6</h1>
 <hr>
-    
 <form onsubmit="build();return false;" id="source">
-    
     Клетки по вертикали:<br>
-    <input type="text" id="height"><br>
+    <input type="text" id="heig"><br>
     Клетки по горизонтали:<br>
-    <input type="text" id="width"><br>
+    <input type="text" id="wid"><br>
     *Не более 50 клеток в любую из сторон <br>
     <p id="win"></p>
     <input type="submit" value="Построить поле">
@@ -121,3 +118,4 @@
 </table>
 </body>
 </html>
+
