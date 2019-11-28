@@ -1,1 +1,147 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Лабораторная 6</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        tr:nth-child(even) {
+            background: #4a4a4a;
+        }
+
+        .wall {
+            background: #525252;
+        }
+
+        .player {
+            background: #ff0000;
+        }
+
+        .win {
+            background: #fbff00;
+        }
+
+        .empty {
+            background: #808080;
+        }
+    </style>
+	<script src="./cookiework.js"></script>
+    <script>
+        var tabarr;
+        var flag = 1;
+        var h;
+        var w;
+        var s = -1;
+        var str = "1111111131100000000110111111111010010101100001000111101111011000000101101111000112000000011111111111";
+        var xpos;
+        var ypos;
+        var winxpos;
+        var winypos;
+        var win = false;
+
+        function build() {
+            var tab = document.getElementById("tabl");
+            h = 10;
+            w = 10;
+			s=-1;
+            tab.innerHTML = "";
+            tabarr = new Array(h);
+            for (let i = 0; i < h; i++) {
+                tabarr[i] = new Array(w);
+                let newline = document.createElement("tr");
+                for (let j = 0; j < w; j++) {
+                    let newcell = document.createElement("td");
+                    let siz = document.documentElement.clientHeight / w;
+                    newcell.width = siz;
+                    newcell.height = siz;
+                    switch (str[++s]) {
+                        case '1':
+                            newcell.className = "wall";
+                            break;
+                        case '2':
+						if(getCookie("Cxpos")!=""){
+						xpos=getCookie("Cxpos");
+						ypos=getCookie("Cypos");
+						newcell.className="player";
+						}
+						else{
+                            newcell.className = "player";
+                            xpos = j;
+                            ypos = i;
+						}
+                            break;
+                        case '3':
+                            newcell.className = "win";
+                            winxpos = j;
+                            winypos = i;
+                            break;
+                        default:
+                            newcell.className = "empty";
+                            break;
+                    }
+                    tabarr[i][j] = newcell;
+                    newline.appendChild(newcell);
+                }
+                tab.appendChild(newline);
+            }
+
+        }
+
+
+        window.onload = function () {
+            build();
+            addEventListener("keydown", move);
+
+            function move(e) {
+                if (win) return;
+                switch (e.key) {
+                    case "w":
+                    case "ц":
+                        if (tabarr[ypos - 1][xpos].className != "wall") {
+                            tabarr[ypos - 1][xpos].className = "player";
+                            tabarr[ypos][xpos].className = "empty";
+                            ypos--;
+                        }
+                        break;
+                    case "a":
+                    case "ф":
+                        if (tabarr[ypos][xpos - 1].className != "wall") {
+                            tabarr[ypos][xpos - 1].className = "player";
+                            tabarr[ypos][xpos].className = "empty";
+                            xpos--;
+                        }
+                        break;
+                    case "d":
+                    case "в":
+                        if (tabarr[ypos][xpos + 1].className != "wall") {
+                            tabarr[ypos][xpos + 1].className = "player";
+                            tabarr[ypos][xpos].className = "empty";
+                            xpos++;
+                        }
+                        break;
+                    case "s":
+                    case "ы":
+                        if (tabarr[ypos + 1][xpos].className != "wall") {
+                            tabarr[ypos + 1][xpos].className = "player";
+                            tabarr[ypos][xpos].className = "empty";
+                            ypos++;
+                        }
+                        break;
+                }
+                if ((xpos == winxpos) && (ypos == winypos)) win = true;
+                if (win) {alert("You win!"); build(); win=false;}
+				setCookie("Cxpos",xpos,2);
+				setCookie("Cypos",ypos,2);
+            }
+        }
+    </script>
+</head>
+<body>
+<h1><a href="index.html">Назад</a></h1>
+<h1 class="center">Лабораторная 6-лабиринт</h1>
+<hr>
+<table id="tabl">
+</table>
+</body>
+</html>
